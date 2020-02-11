@@ -1,107 +1,115 @@
 #include<stdio.h>
 #include<string.h>
-#include<string>
+int sum;
 int main()
     {
-    char x[10],y[10],z[10];
-    char c1[10],c2[10],c3[10],c4[10];
-    char d1[10],d2[10],d3[10],d4[10],d5[10],d6[10],d7[10],d8[10],d9[10],d10[10];
-    int beg=0,in=0,in1=0,in2=0,el;
+    char c1[100],c2[100],c3[100],c4[100],x[100],y[100],z[100];
+	
     int A(char g[]);
+	int M(char str[]);
+	int N(char str[]);
     void B(int t);
     scanf("%s %s %s %s",c1,c2,c3,c4);
-    in=A(c4);
-    sum=transform(d);getchar();
-    beg=beg+in;
-     
-    for(int mm;mm<1000;mm++)
+	if(strcmp(c1,"æ•´æ•°")==0)
+	{
+		sum=A(c4);//å°†c4è½¬æ¢æˆå°æ•°
+		printf("%d\n",sum);
+	}
+	else 
+		printf("è¯·è¾“å…¥æ•´æ•°\n");
+    for(int mm=0;mm<1000;mm++)
     {
-        scanf("%s %s %s",x,y,z);
-        if(strcmp(x,"¿´¿´")==0)
-            break;
-        if(strcmp(y,"¼õÉÙ")==0)
-        {   in1=loading(z);
-        begin=begin-in1;}
-        if(strcmp(y,"Ôö¼Ó")==0)
-        {   in2=loading(z);
-        begin=begin+in2;}
-if(sum<=10) result(sum);
-    if(sum>10){
-        int a;
-        a=sum/10;
-        if(a==1) printf("Ê®");
-        else{
-            result(a);
-            printf("Ê®");
-        }
-        int b; 
-        b=sum%10;   
-        if(b!=0) result(b);
-    }
-    return 0;
-if(beg>el)
-        for (int g1=1;g1<len-1; g1+=2) 
-        {
-            
-            printf("%c%c",d7[i1],d7[i1+1]);
-        }
-    else
-        for (int g2=1;g2<len1-1;g2+=2) 
-        {
-        
-            printf("%c%c",d10[g2],d10[g2+1]);
-        }
-
+        scanf("%s",x);
+		if(strcmp(c2,x)==0){//å°†æ­¤æ¬¡è¾“å…¥çš„å˜é‡ä¸ä¹‹å‰çš„è¿›è¡Œåˆ¤æ–­
+				scanf("%s %s",y,z);
+				if(strcmp(y,"å‡å°‘")==0)
+				{   sum=N(z);}
+				else
+				{   sum=M(z);}
+				printf("%d\n",sum);
+		}
+		else if(strcmp(x,"çœ‹çœ‹")==0){
+			scanf("%s",y);
+			if(strcmp(c2,y)==0){
+				if(sum<=10) {
+					B(sum);//å°†å°æ•°å˜æˆæ±‰å­—
+					printf("\n");
+				}
+				if(sum>10&&sum<19){
+					if(sum/10!=1)
+					{
+						B(sum/10);
+						printf("å");
+					}
+					else{
+						printf("å");
+						B(sum%10);
+					}
+					printf("\n");
+				}
+			}
+			else{
+				printf("æœªè¾“å…¥æ­¤å˜é‡");
+				return 0;
+			}
+		}
+		else
+		{	printf("æœªè¾“å…¥æ­¤å˜é‡");
+			return 0;
+		}
+	}
 }
 int A(char g[10])
 {
-    if(strcmp("Áã",g)==0)return 0;
-    if(strcmp("Ò»",g)==0)return 1;
-    if(strcmp("¶ş",g)==0)return 2;
-    if(strcmp("Èı",g)==0)return 3;
-    if(strcmp("ËÄ",g)==0)return 4;
-    if(strcmp("Îå",g)==0)return 5;
-    if(strcmp("Áù",g)==0)return 6;
-    if(strcmp("Æß",g)==0)return 7;
-    if(strcmp("°Ë",g)==0)return 8;
-    if(strcmp("¾Å",g)==0)return 9;
-    if(strcmp("Ê®",g)==0)return 10;
+    if(strcmp("é›¶",g)==0)return 0;
+    if(strcmp("ä¸€",g)==0)return 1;
+    if(strcmp("äºŒ",g)==0)return 2;
+    if(strcmp("ä¸‰",g)==0)return 3;
+    if(strcmp("å››",g)==0)return 4;
+    if(strcmp("äº”",g)==0)return 5;
+    if(strcmp("å…­",g)==0)return 6;
+    if(strcmp("ä¸ƒ",g)==0)return 7;
+    if(strcmp("å…«",g)==0)return 8;
+    if(strcmp("ä¹",g)==0)return 9;
+    if(strcmp("å",g)==0)return 10;
 }
-void M(char str[]){
-    if(strcmp(" Ôö¼Ó Ò»",str)==0)sum+=1;
-    if(strcmp(" Ôö¼Ó ¶ş",str)==0)sum+=2;
-    if(strcmp(" Ôö¼Ó Èı",str)==0)sum+=3;
-    if(strcmp(" Ôö¼Ó ËÄ",str)==0)sum+=4;
-    if(strcmp(" Ôö¼Ó Îå",str)==0)sum+=5;
-    if(strcmp(" Ôö¼Ó Áù",str)==0)sum+=6;
-    if(strcmp(" Ôö¼Ó Æß",str)==0)sum+=7;
-    if(strcmp(" Ôö¼Ó °Ë",str)==0)sum+=8;
-    if(strcmp(" Ôö¼Ó ¾Å",str)==0)sum+=9;
-    if(strcmp(" Ôö¼Ó Ê®",str)==0)sum+=10;
+int M(char str[]){
+    if(strcmp("ä¸€",str)==0)return sum+1;
+    if(strcmp("äºŒ",str)==0)return sum+2;
+    if(strcmp("ä¸‰",str)==0)return sum+3;
+    if(strcmp("å››",str)==0)return sum+4;
+    if(strcmp("äº”",str)==0)return sum+5;
+    if(strcmp("å…­",str)==0)return sum+6;
+    if(strcmp("ä¸ƒ",str)==0)return sum+7;
+    if(strcmp("å…«",str)==0)return sum+8;
+    if(strcmp("ä¹",str)==0)return sum+9;
+    if(strcmp("å",str)==0)return sum+10;
 }
-void N(char str[]){
-    if(strcmp(" ¼õÉÙ Ò»",str)==0)sum-=1;
-    if(strcmp(" ¼õÉÙ ¶ş",str)==0)sum-=2;
-    if(strcmp(" ¼õÉÙ Èı",str)==0)sum-=3;
-    if(strcmp(" ¼õÉÙ ËÄ",str)==0)sum-=4;
-    if(strcmp(" ¼õÉÙ Îå",str)==0)sum-=5;
-    if(strcmp(" ¼õÉÙ Áù",str)==0)sum-=6;
-    if(strcmp(" ¼õÉÙ Æß",str)==0)sum-=7;
-    if(strcmp(" ¼õÉÙ °Ë",str)==0)sum-=8;
-    if(strcmp(" ¼õÉÙ ¾Å",str)==0)sum-=9;
-    if(strcmp(" ¼õÉÙ Ê®",str)==0)sum-=10;
+int N(char str[]){
+	int sum1;
+	sum1=A(str);
+    if(strcmp("ä¸€",str)==0)return sum-1;
+    if(strcmp("äºŒ",str)==0)return sum-2;
+    if(strcmp("ä¸‰",str)==0)return sum-3;
+    if(strcmp("å››",str)==0)return sum-4;
+    if(strcmp("äº”",str)==0)return sum-5;
+    if(strcmp("å…­",str)==0)return sum-6;
+    if(strcmp("ä¸ƒ",str)==0)return sum-7;
+    if(strcmp("å…«",str)==0)return sum-8;
+    if(strcmp("ä¹",str)==0)return sum-9;
+    if(strcmp("å",str)==0)return sum-10;
 }
 void B(int t)
 {
-    if(t==0){printf("Áã");} 
-    if(t==1){printf("Ò»");} 
-    if(t==2){printf("¶ş");} 
-    if(t==3){printf("Èı");} 
-    if(t==4){printf("ËÄ");} 
-    if(t==5){printf("Îå");} 
-    if(t==6){printf("Áù");} 
-    if(t==7){printf("Æß");} 
-    if(t==8){printf("°Ë");} 
-    if(t==9){printf("¾Å");} 
-    if(t==10){printf("Ê®");}
+    if(t==0){printf("é›¶");} 
+    if(t==1){printf("ä¸€");} 
+    if(t==2){printf("äºŒ");} 
+    if(t==3){printf("ä¸‰");} 
+    if(t==4){printf("å››");} 
+    if(t==5){printf("äº”");} 
+    if(t==6){printf("å…­");} 
+    if(t==7){printf("ä¸ƒ");} 
+    if(t==8){printf("å…«");} 
+    if(t==9){printf("ä¹");} 
+    if(t==10){printf("å");}
 }
