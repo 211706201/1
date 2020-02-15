@@ -7,6 +7,7 @@ int main()
     char c1[10],c2[10],c3[10],c4[10];
     char d1[10],d2[10],d3[10],d4[10],d5[10],d6[10],d7[10],d8[10],d9[10],d10[10];
     int beg=0,in=0,in1=0,in2=0,el;
+    int sum;
     int A(char g[]);
     void B(int t);
     scanf("%s %s %s %s",c1,c2,c3,c4);
